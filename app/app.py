@@ -52,6 +52,4 @@ def index():
 
 
 if __name__ == "__main__":  # pragma: no cover
-    app.run(
-        debug=True, port=8000, host='0.0.0.0'
-    )  # Remove debug=True in production
+    app.run(debug=True, port=8000, host="0.0.0.0")  # Remove debug=True in production

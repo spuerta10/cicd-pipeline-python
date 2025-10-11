@@ -1,6 +1,7 @@
 """
 Basic arithmetic functions: add, subtract, multiply, divide.
 """
+
 # app/calculadora.py
 
 
