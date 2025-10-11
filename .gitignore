@@ -21,3 +21,5 @@ acceptance_coverage.xml
 
 # IDE
 .vscode/
+
+*.DS_Store
