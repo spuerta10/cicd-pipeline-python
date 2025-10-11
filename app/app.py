@@ -12,7 +12,7 @@ from app.calculator import sumar, restar, multiplicar, dividir
 app = Flask(__name__)
 
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/", methods=["POST"])
 def index():
     """
     Render calculator form and process arithmetic operations.
@@ -52,4 +52,4 @@ def index():
 
 
 if __name__ == "__main__":  # pragma: no cover
-    app.run(debug=True, port=8000, host="0.0.0.0")  # Remove debug=True in production
+    app.run(port=8000, host="0.0.0.0")  # Remove debug=True in production
