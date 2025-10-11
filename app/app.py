@@ -42,11 +42,11 @@ def index():
             elif operacion == "dividir":
                 resultado = dividir(num1, num2)
             else:
-                resultado = "Invalid operation"
+                resultado = "Operación no válida"
         except ValueError:
-            resultado = "Error: Enter valid numbers"
+            resultado = "Error: Introduce números válidos"
         except ZeroDivisionError:
-            resultado = "Error: Cannot divide by zero"
+            resultado = "Error: No se puede dividir por cero"
 
     return render_template("index.html", resultado=resultado)
 
