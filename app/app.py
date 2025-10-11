@@ -7,9 +7,12 @@ Routes:
     (add, subtract, multiply, divide).
 """
 from flask import Flask, render_template, request
+from flask_wtf.csrf import CSRFProtect
 from app.calculator import sumar, restar, multiplicar, dividir
 
 app = Flask(__name__)
+csrf = CSRFProtect()
+csrf.init_app(app)
 
 
 @app.route("/", methods=["POST"])
