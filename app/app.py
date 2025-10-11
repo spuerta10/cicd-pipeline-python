@@ -3,12 +3,14 @@
 Flask web app for a simple calculator.
 
 Routes:
-    / : Display the calculator form and handle operations (add, subtract, multiply, divide).
+    / : Display the calculator form and handle operations
+    (add, subtract, multiply, divide).
 """
 from flask import Flask, render_template, request
 from app.calculator import sumar, restar, multiplicar, dividir
 
 app = Flask(__name__)
+
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -48,5 +50,8 @@ def index():
 
     return render_template("index.html", resultado=resultado)
 
+
 if __name__ == "__main__":  # pragma: no cover
-    app.run(debug=True, port=8000, host='0.0.0.0')  # Remove debug=True in production
+    app.run(
+        debug=True, port=8000, host='0.0.0.0'
+    )  # Remove debug=True in production

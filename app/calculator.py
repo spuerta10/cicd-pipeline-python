@@ -3,6 +3,7 @@ Basic arithmetic functions: add, subtract, multiply, divide.
 """
 # app/calculadora.py
 
+
 def sumar(a, b):
     """
     Return the sum of two numbers.
@@ -15,6 +16,7 @@ def sumar(a, b):
         int | float: a + b
     """
     return a + b
+
 
 def restar(a, b):
     """
@@ -29,6 +31,7 @@ def restar(a, b):
     """
     return a - b
 
+
 def multiplicar(a, b):
     """
     Return the product of two numbers.
@@ -41,6 +44,7 @@ def multiplicar(a, b):
         int | float: a * b
     """
     return a * b
+
 
 def dividir(a, b):
     """
