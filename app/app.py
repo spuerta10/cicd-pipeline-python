@@ -61,5 +61,9 @@ def calculate():
     return render_template("index.html", resultado=resultado)
 
 
+@app.route("/health")
+def health():
+    return "OK", 200
+
 if __name__ == "__main__":  # pragma: no cover
     app.run(port=8000, host="0.0.0.0")
