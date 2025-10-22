@@ -63,6 +63,9 @@ def calculate():
 
 @app.route("/health")
 def health():
+    """
+    Handles request by ALB (load balancer) to check app OK status.
+    """
     return "OK", 200
 
 
