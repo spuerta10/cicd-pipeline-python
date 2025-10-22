@@ -38,6 +38,21 @@ def test_index_post_dividir_by_zero(client):
     assert response.status_code == 200
     assert b'Error: No se puede dividir por cero' in response.data
 
+def test_index_post_potencia(client):
+    response = client.post('/', data={'num1': '6', 'num2': '3', 'operacion': 'potencia'})
+    assert response.status_code == 200
+    assert b'216' in response.data
+
+def test_index_post_mod(client):
+    response = client.post('/', data={'num1': '6', 'num2': '3', 'operacion': 'modulo'})
+    assert response.status_code == 200
+    assert b'0.0' in response.data
+
+def test_index_post_mod_by_zero(client):
+    response = client.post('/', data={'num1': '6', 'num2': '0', 'operacion': 'modulo'})
+    assert response.status_code == 200
+    assert b'Error: No se puede dividir por cero' in response.data
+
 def test_index_post_invalid_operation(client):
     response = client.post('/', data={'num1': '6', 'num2': '3', 'operacion': 'invalid'})
     assert response.status_code == 200

@@ -64,3 +64,19 @@ def dividir(a, b):
     if b == 0:
         raise ZeroDivisionError("Cannot divide by zero")
     return a / b
+
+
+def potencia(a, b):
+    """
+    Return a raised to the power of b
+    """
+    return a ** b
+
+
+def modulo(a, b):
+    """
+    Return remainder of the division of a by b
+    """
+    if b == 0:
+        raise ZeroDivisionError("Cannot mod by zero")
+    return a % b
